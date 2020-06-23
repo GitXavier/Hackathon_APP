@@ -11,7 +11,7 @@
 
   // @include trans-duration(500ms);
 
-  @media #{$breakpoint-md} {
+  @media #{$breakpoint-xs-md} {
       height: 70px;
   }
   @media #{$breakpoint-xs} {
@@ -19,7 +19,7 @@
   }
 }
 
-mat-icon {
+.iconBurger mat-icon {
   visibility: hidden;
   position: absolute;
   right: 20px;
@@ -34,24 +34,46 @@ mat-icon {
   }
 }
 
-mat-icon:hover {
+.iconBurger mat-icon:hover {
     color: $titleHover-color;
 }
 
 #links {
-  width: 100%;
-  //border: solid 3px red;
-  position: absolute;
-  top: 70px;
-  display: none;
-  background-color: white;
+
+  display: flex;
+
+  @media #{$breakpoint-xs-md} {
+    width: 100%;
+    //border: solid 3px red;
+    position: absolute;
+    top: 70px;
+    display: none;
+    background-color: white;
+  }
+
 }
 
-.navbar a {
-  color: $title-color;
-  padding: 14px 16px;
+.navbar #links a {
+
   text-decoration: none;
-  font-size: 17px;
-  display: block;
+  text-align: start;
+
+  @media #{$breakpoint-xs-md} {
+    color: $text-color;
+    padding: 14px 16px;
+    font-size: 17px;
+    display: block;
+  }
 }
 
+.navbar #links a:hover {
+
+  @media #{$breakpoint-xs-md} {
+    color: $titleHover-color;
+  }
+}
+
+.navbar #links a mat-icon {
+  float: right;
+  font-size: 20px;
+}
