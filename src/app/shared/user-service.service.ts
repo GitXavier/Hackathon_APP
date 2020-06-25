@@ -16,6 +16,10 @@ export class UserServiceService {
     return this.http.get<Users[]>(UserServiceService.BASE_URL);
   }
 
+  public post(user:Users) : Observable <Users>  {
+    return this.http.post<Users>(UserServiceService.BASE_URL, user);
+  }
+
 
 
 

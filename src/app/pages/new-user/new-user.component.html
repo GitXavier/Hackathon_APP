@@ -1,0 +1,63 @@
+<div class="container">
+<form (ngSubmit)="onSubmit()" #myForm="ngForm">
+
+  <div>
+    <label for="lastname">Nom</label>
+    <input name="lastname" type="text" [(ngModel)]="model.lastname" #lastname="ngModel">
+  </div>
+  <div *ngIf="lastname.errors && myForm.submitted">
+    <span *ngIf="lastname.errors?.required"> Le champ prénom est requis</span>
+
+  </div>
+
+
+  <div>
+    <label for="firstname">Prénom</label>
+    <input name="firstname" type="text" [(ngModel)]="model.firstname" #firstname="ngModel" required>
+  </div>
+  <div *ngIf="firstname.errors && myForm.submitted">
+    <span *ngIf="firstname.errors?.required"> Le chanp firstname est requis</span>
+   </div>
+
+
+  <div>
+    <label for="phone"> Téléphone</label>
+    <input name="phone" type="number" [(ngModel)]="model.phone" #phone="ngModel" required>
+  </div>
+  <div *ngIf="phone.errors">
+    <span *ngIf="phone.errors?.required"> le champ téléphone est requis</span>
+  </div>
+
+
+  <div>
+    <label for="height">taille</label>
+    <input name="height" type="number" [(ngModel)]="model.height" #height required >
+  </div>
+  <div *ngIf="height.errors">
+    <span *ngIf="height.errors?.required"> le champ taille est requis</span>
+  </div>
+
+  <div>
+    <label for="weight">poids</label>
+    <input name="weight" type="number" [(ngModel)]="model.weight" #weight required >
+  </div>
+  <div *ngIf="weight.errors">
+    <span *ngIf="weight.errors?.required"> le champ poids est requis</span>
+  </div>
+
+  <div>
+    <label for="birthday">date de naissance</label>
+    <input name="birthday" type="date" [(ngModel)]="model.birthday" #birthday required >
+  </div>
+  <div *ngIf="birthday.errors">
+    <span *ngIf="birthday.errors?.required"> le champ date de naissance est requis</span>
+  </div>
+
+
+
+  <button type="submit">valider</button>
+
+
+</form>
+
+</div>

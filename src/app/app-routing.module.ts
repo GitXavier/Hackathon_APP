@@ -3,7 +3,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { PilulierComponent } from './pages/pilulier/pilulier/pilulier.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { AppComponent } from './app.component';
+import { NewUserComponent } from './pages/new-user/new-user.component';
 import { PilulierNewComponent } from './pages/pilulier-new/pilulier-new.component';
+
 
 
 const routes: Routes = [
@@ -19,6 +21,7 @@ const routes: Routes = [
     path: 'homepage',
     component: HomepageComponent,
   },
+  {path:'users/new', component: NewUserComponent},
   {
     path: '',
     redirectTo: 'homepage',
