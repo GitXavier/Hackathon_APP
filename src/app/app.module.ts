@@ -17,6 +17,8 @@ import { PilulierComponent } from './pages/pilulier/pilulier/pilulier.component'
 // Material
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
+import {MatExpansionModule} from '@angular/material/expansion';
+import { UserComponent } from './pages/user/user.component';
 
 
 
@@ -26,9 +28,10 @@ import {MatIconModule} from '@angular/material/icon';
     NavbarComponent,
     HomepageComponent,
     SidebarComponent,
-    NewUserComponent
+    NewUserComponent,
     PilulierNewComponent,
     PilulierComponent,
+    UserComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,6 +41,7 @@ import {MatIconModule} from '@angular/material/icon';
     MatButtonModule,
     MatIconModule,
     FormsModule,
+    MatExpansionModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

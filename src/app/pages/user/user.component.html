@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="box">
+    <mat-accordion>
+      <mat-expansion-panel (opened)="panelOpenState = true"
+                          (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h1 class="title">Ajouter un nouveau patient</h1>
+          </mat-panel-title>
+          <mat-panel-description>
+            {{panelOpenState ? ' ' : ' '}}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <app-new-user></app-new-user>
+
+      </mat-expansion-panel>
+    </mat-accordion>
+
+    <table id="customers">
+      <tr>
+        <th>Patient</th>
+        <th>Suivi</th>
+      </tr>
+      <tr *ngFor="let user of users">
+        <td>{{user.firstname | uppercase}} {{user.lastname | uppercase}}</td>
+        <td class="suivi">
+          <a href="">Créer un pilulier -</a>
+          <a href="">Modifier Pilulier -</a>
+          <a [routerLink]="['/users']" (click)="delete(user.id)">Supprimer le patient</a>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+
+

@@ -1,3 +1,23 @@
-.container{
-  margin-left: 250px;
+form {
+
 }
+
+.inputForm {
+  padding: 10px;
+
+  label {
+    padding-right: 10px;
+  }
+}
+
+.bouton {
+  float: right;
+  height: 30px;
+}
+
+.allForm {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
