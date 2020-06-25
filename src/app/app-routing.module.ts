@@ -5,32 +5,18 @@ import { HomepageComponent } from './pages/homepage/homepage.component';
 import { AppComponent } from './app.component';
 import { NewUserComponent } from './pages/new-user/new-user.component';
 import { PilulierNewComponent } from './pages/pilulier-new/pilulier-new.component';
+import { UserComponent } from './pages/user/user.component';
 
 
 
 const routes: Routes = [
-  {
-    path: 'piluliers',
-    component: PilulierComponent,
-  },
-  {
-    path: 'piluliers/new',
-    component: PilulierNewComponent,
-  },
-  {
-    path: 'homepage',
-    component: HomepageComponent,
-  },
-  {path:'users/new', component: NewUserComponent},
-  {
-    path: '',
-    redirectTo: 'homepage',
-    pathMatch: 'full'
-  },
-  {
-    path: '**',
-    redirectTo: 'homepage'
-  }
+  {path: 'piluliers', component: PilulierComponent},
+  {path: 'piluliers/new', component: PilulierNewComponent},
+  {path: 'homepage', component: HomepageComponent},
+  {path: 'users', component: UserComponent},
+  {path: 'users/new', component: NewUserComponent},
+  {path: '', redirectTo: 'homepage', pathMatch: 'full'},
+  {path: '**', redirectTo: 'homepage'}
 ];
 
 @NgModule({
