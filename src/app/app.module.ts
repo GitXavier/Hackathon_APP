@@ -8,11 +8,13 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 
 // Material
 import {MatButtonModule} from '@angular/material/button';
+import { HomepageComponent } from './pages/homepage/homepage.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    HomepageComponent
   ],
   imports: [
     BrowserModule,
