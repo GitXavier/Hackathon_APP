@@ -12,8 +12,12 @@ export class UserServiceService {
 
   private static BASE_URL = 'http://localhost:8080/users';
 
-  public getAll() : Observable<Users[]> {
+  public getAll(): Observable<Users[]> {
     return this.http.get<Users[]>(UserServiceService.BASE_URL);
+  }
+
+  public post(user:Users) : Observable <Users>  {
+    return this.http.post<Users>(UserServiceService.BASE_URL, user);
   }
 
 
