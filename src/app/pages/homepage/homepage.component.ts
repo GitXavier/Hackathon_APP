@@ -9,14 +9,15 @@ import { Users } from 'src/app/shared/users';
 })
 export class HomepageComponent implements OnInit {
 
-  users : Users[]=[];
+  users: Users[] = [];
 
-  constructor(private service : UserServiceService) { }
+  constructor(private service: UserServiceService) { }
 
   ngOnInit(): void {
-    this.service.getAll().subscribe((users)=>{
-      this.users= users;
-    })
-  }
+    this.service.getAll().subscribe((users) => {
+      this.users = users;
 
+      console.log(users);
+    });
+  }
 }

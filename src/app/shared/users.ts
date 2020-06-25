@@ -1,15 +1,15 @@
 
 export class Users {
-  id:number;
-  firstname : String;
-  lastname: String;
-  phone : number;
-  birthday : Date;
-  height : number;
-  weight : number;
-  isPatient : boolean;
-  sexe : String;
-  PillDispenserId:number;
+  id: number;
+  firstname: string;
+  lastname: string;
+  phone: number;
+  birthday: Date;
+  height: number;
+  weight: number;
+  isPatient: boolean;
+  sexe: string;
+  pillDispenser: object;
 
   constructor(){}
 }

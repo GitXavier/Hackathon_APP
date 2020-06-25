@@ -1,0 +1,8 @@
+<div class="container">
+  <form (ngSubmit)="send()" #form="ngForm">
+    <input type="text" name="name" [(ngModel)]="pilulier.name" #name="ngModel" id="">
+    <button type="submit">
+        Enregistrer
+    </button>
+  </form>
+</div>
