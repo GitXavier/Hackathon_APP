@@ -12,13 +12,16 @@ import { HomepageComponent } from './pages/homepage/homepage.component';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
+import { NewUserComponent } from './pages/new-user/new-user.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomepageComponent,
-    SidebarComponent
+    SidebarComponent,
+    NewUserComponent
   ],
   imports: [
     BrowserModule,
@@ -27,6 +30,7 @@ import { SidebarComponent } from './shared/sidebar/sidebar.component';
     BrowserAnimationsModule,
     MatButtonModule,
     MatIconModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
