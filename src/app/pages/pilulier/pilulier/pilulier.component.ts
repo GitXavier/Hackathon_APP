@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Pilulier } from 'src/app/shared/models/Pilulier';
+import { PilulierService } from 'src/app/shared/services/pilulier.service';
+
 
 @Component({
   selector: 'app-pilulier',
@@ -7,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PilulierComponent implements OnInit {
 
-  constructor() { }
+  piluliers: Pilulier[] = [];
+
+  constructor(private service: PilulierService) { }
 
   ngOnInit(): void {
+    this.service.getAll().subscribe((piluliers) => {
+      this.piluliers = piluliers;
+
+      console.log(piluliers);
+    });
   }
 
 }
