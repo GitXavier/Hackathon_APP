@@ -4,18 +4,22 @@ import { PilulierComponent } from './pages/pilulier/pilulier/pilulier.component'
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { AppComponent } from './app.component';
 import { NewUserComponent } from './pages/new-user/new-user.component';
+import { PilulierNewComponent } from './pages/pilulier-new/pilulier-new.component';
+
 
 
 const routes: Routes = [
   {
     path: 'piluliers',
     component: PilulierComponent,
-    pathMatch: 'full'
+  },
+  {
+    path: 'piluliers/new',
+    component: PilulierNewComponent,
   },
   {
     path: 'homepage',
     component: HomepageComponent,
-    pathMatch: 'full'
   },
   {path:'users/new', component: NewUserComponent},
   {
