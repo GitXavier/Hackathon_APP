@@ -26,7 +26,7 @@ import {MatIconModule} from '@angular/material/icon';
     NavbarComponent,
     HomepageComponent,
     SidebarComponent,
-    NewUserComponent
+    NewUserComponent,
     PilulierNewComponent,
     PilulierComponent,
   ],
