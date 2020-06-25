@@ -9,11 +9,13 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 // Material
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
+import { SidebarComponent } from './shared/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
