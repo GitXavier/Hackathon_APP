@@ -1,10 +1,35 @@
 <div class="container">
-  <div id="userList" *ngFor="let user of users">
-    <p>{{user.firstname}} {{user.lastname}}</p>
-    <p>{{user.pillDispenser?.pathology}}</p>
 
-   <!-- lien vers pilulier/{{user.pillDispenser?.id}} -->
-  </div>
+ <div id="main">
+  <table class="tableau">
+    <h2> Liste des patients qui ont arrêtés leurs traitement</h2>
+    <tr id="stop">
+      <th>Patient</th>
+      <th>Pathologie</th>
+      <th colspan="2">Pilulier</th>
+    </tr>
+    <tr *ngFor="let user of users">
+
+      <td *ngIf="user.isStop">{{user.firstname}} {{user.lastname}}</td>
+      <td *ngIf="user.isStop">{{user.pillDispenser?.pathology}}</td>
+      <td *ngIf="user.isStop">Modifier</td> <td *ngIf="user.isStop">Supprimer</td>
+    </tr>
+  </table>
+
+    <table class="tableau">
+      <h2> Liste des patients qui arrivent en fin de traitement</h2>
+      <tr>
+        <th>Patient</th>
+        <th>Pathologie</th>
+        <th>Pilulier</th>
+      </tr>
+      <tr *ngFor="let user of users">
+        <td *ngIf="user.isEnd">{{user.firstname}} {{user.lastname}}</td>
+        <td *ngIf="user.isEnd">{{user.pillDispenser?.pathology}}</td>
+        <td *ngIf="user.isEnd"> <a> renouveller </a> </td>
+      </tr>
+  </table>
+ </div>
 </div>
 
 

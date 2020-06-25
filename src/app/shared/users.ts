@@ -8,6 +8,8 @@ export class Users {
   height: number;
   weight: number;
   isPatient: boolean;
+  isStop:boolean;
+  isEnd:boolean;
   sexe: string;
   pillDispenser: object;
 
