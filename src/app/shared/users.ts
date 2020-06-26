@@ -3,7 +3,7 @@ export class Users {
   id: number;
   firstname: string;
   lastname: string;
-  phone: number;
+  phone: String;
   birthday: Date;
   height: number;
   weight: number;
